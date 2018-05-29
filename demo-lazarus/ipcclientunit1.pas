@@ -10,8 +10,8 @@ uses
 
 {$i ../libdeclare.inc}
 
-const
-  TEST_SERVER_ID = '123';
+//const
+//  TEST_SERVER_ID = '123';
 
 type
 

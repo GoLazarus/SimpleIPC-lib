@@ -3,11 +3,12 @@ object Form1: TForm1
   Height = 240
   Top = 128
   Width = 354
+  ActiveControl = bCreateIpcServer
   Caption = 'Form1'
   ClientHeight = 240
   ClientWidth = 354
-  OnCreate = FormCreate
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.2.0'
+  Visible = False
   object bCreateIpcServer: TButton
     Left = 188
     Height = 25

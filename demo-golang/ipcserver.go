@@ -7,7 +7,7 @@
 package main
 
 /*
-#cgo LDFLAGS: -L${SRCDIR} -ldynsimpleipc
+#cgo LDFLAGS: -L. -ldynsimpleipc
 
 #include "simpleipc.h"
 
@@ -109,11 +109,19 @@ func Example2() {
 	C.sIpcFreeServer()
 }
 
+func Example3() {
+	C.sIpcCreateClient()
+	C.sIpcStartClient(C.CString("123"))
+	C.sIpcSendStringMsg(C.CString("Hello OK"))
+	C.sIpcFreeClient()
+}
+
 
 func main() {
 	reader = bufio.NewReader(os.Stdin)
 	fmt.Println("Go program started")
-	Example1()
-	Example2()
+	//Example1()
+	//Example2()
+	Example3()
 	fmt.Println("Go program done")
 }
